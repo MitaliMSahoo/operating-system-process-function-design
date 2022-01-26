@@ -1,0 +1,13 @@
+MAIN: Forking Process started ....
+MAIN: PID 9618 Parent Process running and waiting for child process to finish.
+MAIN: redirect_fork child created with PID: 9620 
+MAIN: bg_fork child created with PID 9621 
+C3: PID: 9621 : BG_JOB_FORK waiting for grandchild to finish output redirection function 
+MAIN: pipe_fork_function child created with PID: 9619 
+C1: Passing data to grandchild 
+ GC3: Grandchild: i'm running in the background
+GC1: pipe (grandchild) running and receiving data from parent
+C1: HELLO WORLD (message to grandchild) 
+I'm MITALI SAHOO, A GRAD STUDENT AT SCU!!        
+C2: Done redirecting input to a file
+MAIN: PID 9618 Parent process is exiting. 
