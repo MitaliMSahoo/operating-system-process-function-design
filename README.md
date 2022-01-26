@@ -1,8 +1,8 @@
 # operating-system-process-function-design
 The program does the function of forking child and grandchild processes and does three functions as below: 
-a.	Pipe operation : It does the work of data writing by a process and then shared to its child to do read operation.
-b.	Redirection of input and output: Here the child process reads the input from the user and redirects it into a file(as an output)
-c.	Background job run: The child of a process runs a job function in the background.
+	a.	Pipe operation : It does the work of data writing by a process and then shared to its child to do read operation.
+	b.	Redirection of input and output: Here the child process reads the input from the user and redirects it into a file(as an output)
+	c.	Background job run: The child of a process runs a job function in the background.
 
 
 2. High-level design(you could use a flowchart for this)
@@ -12,14 +12,14 @@ c.	Background job run: The child of a process runs a job function in the backgro
 		      (C1) pipe_fork                (C2)bg_fork           (C3)redirect_fork
 				/     	             \
                   		(GC1)             		(GC2)
-1.	The program creates 3 child process of a parent process called  pipe_fork(C1) , bg_fork(C2) & redirect_fork (C3).
-2.	Child process pipe_fork(C1)  does the function of performing pipe operation.
-	(i) 	It creates a child (GrandChild(GC1) for parent process)  to which the process(C1) sends data(eg: HELLO WORLD) in written.
-	(ii) 	The GC1 receives the data from C1 and reads it and displays on screen.
-3.	Child process bg_fork(C2)  does the function of running a job in the background.
-	(i) 	C2 forks a child process of its own (GrandChild(GC2)) and GC2 runs a job in the background.
-4.	Child process redirect_fork (C3) performs the operation of redirection of input and output.
-	(i) 	C3 takes input from the user and redirects the data into a file called “redirect.txt”.
+	1.	The program creates 3 child process of a parent process called  pipe_fork(C1) , bg_fork(C2) & redirect_fork (C3).
+	2.	Child process pipe_fork(C1)  does the function of performing pipe operation.
+		(i) 	It creates a child (GrandChild(GC1) for parent process)  to which the process(C1) sends data(eg: HELLO WORLD) in written.
+		(ii) 	The GC1 receives the data from C1 and reads it and displays on screen.
+	3.	Child process bg_fork(C2)  does the function of running a job in the background.
+		(i) 	C2 forks a child process of its own (GrandChild(GC2)) and GC2 runs a job in the background.
+	4.	Child process redirect_fork (C3) performs the operation of redirection of input and output.
+		(i) 	C3 takes input from the user and redirects the data into a file called “redirect.txt”.
 
 3. Building the program
 	1.	Variables used: The variables are mostly used locally inside the functions and are locally passes between every parent and its child.
